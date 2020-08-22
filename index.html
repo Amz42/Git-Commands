@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Commands</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <style></style>
+
+</head>
+<body>
+    <h1 align="center">Git Commands</h1>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Command</th>
+                <th>descrptription</th>
+            </tr>
+        </thead>
+        <tbody id="commands"></tbody>
+    </table>
+</body>
+
+
+
+
+<script>
+    let obj=[
+        {
+            "command": "git init" ,
+            "descrpt": "Initializes empty git repository"
+        },{
+            "command": "git add -A" ,
+            "descrpt": "stages All"
+        },{
+            "command": "git add ." ,
+            "descrpt": "stages new & modified, without deleted"
+        },{
+            "command": "git add -u" ,
+            "descrpt": "stages modified & deleted, without new"
+        },{
+            "command": "git clone <i>'repository link'</i>" ,
+            "descrpt": "clones a git repository to local system in new folder"
+        },{
+            "command": "git clone <i>'repository link'</i> ." ,
+            "descrpt": "clones a git repository to local system within current folder"
+        },{
+            "command": "git rm --cached <i>'filename'</i>" ,
+            "descrpt": "to make a file untracked in future commits"
+        },{
+            "command": "git status" ,
+            "descrpt": "to see the current status of current repository in path"
+        },{
+            "command": "git branch" ,
+            "descrpt": "to see all the branches in current repository"
+        },{
+            "command": "git branch <i>'branch_name'</i>" ,
+            "descrpt": "to create a new branch"
+        },{
+            "command": "git checkout <i>'branch_name'</i>" ,
+            "descrpt": "to switch & work with another branch in current repository"
+        },{
+            "command": "git push origin <i>'branch_name'</i>" ,
+            "descrpt": "to push commits to a specified branch"
+        },{
+            "command": "git merge <i>'branch_name'</i>" ,
+            "descrpt": "to merge specified branch in the current branch"
+        },{
+            "command": "git branch -d <i>'branch_name'</i>" ,
+            "descrpt": "to delete a branch from local system repository"
+        },{
+            "command": "" ,
+            "descrpt": ""
+        },{
+            "command": "" ,
+            "descrpt": ""
+        },{
+            "command": "" ,
+            "descrpt": ""
+        },{
+            "command": "" ,
+            "descrpt": ""
+        },{
+            "command": "" ,
+            "descrpt": ""
+        }
+    ];
+
+    obj.map(o=>{
+        document.getElementById("commands").innerHTML += `<tr> <td>${o.command}</td> <td>${o.descrpt}</td> </tr>`;
+    });
+
+</script>
+
+</html>
