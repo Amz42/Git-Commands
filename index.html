@@ -6,19 +6,26 @@
     <title>Git Commands</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
-    <style></style>
+    <style>
+        *{
+            font-size:15pt;
+        }
+        i{
+            color: cyan;
+        }
+    </style>
 
 </head>
 <body>
     <h1 align="center">Git Commands</h1>
-    <table class="table table-dark">
-        <thead>
+    <table class="table table-striped table-dark">
+        <thead class="table-dark">
             <tr>
-                <th>Command</th>
-                <th>descrptription</th>
+                <th> <h4>Command</h4> </th>
+                <th> <h4>Description</h4> </th>
             </tr>
         </thead>
-        <tbody id="commands"></tbody>
+        <tbody id="commands" class=""></tbody>
     </table>
 </body>
 
@@ -40,11 +47,17 @@
             "command": "git add -u" ,
             "descrpt": "stages modified & deleted, without new"
         },{
+            "command": "git add <i>'filename'</i>" ,
+            "descrpt": "to add a file to staging area"
+        },{
             "command": "git clone <i>'repository link'</i>" ,
             "descrpt": "clones a git repository to local system in new folder"
         },{
             "command": "git clone <i>'repository link'</i> ." ,
             "descrpt": "clones a git repository to local system within current folder"
+        },{
+            "command": "git clone <i>'repository link' 'folder_name'</i> " ,
+            "descrpt": "clones a git repository in specified folder"
         },{
             "command": "git rm --cached <i>'filename'</i>" ,
             "descrpt": "to make a file untracked in future commits"
@@ -69,6 +82,48 @@
         },{
             "command": "git branch -d <i>'branch_name'</i>" ,
             "descrpt": "to delete a branch from local system repository"
+        },{
+            "command": "git push origin --delete <i>'branch_name'</i>" ,
+            "descrpt": "to delete a branch from remote(online) repository"
+        },{
+            "command": "git diff" ,
+            "descrpt": "compares working area with staging area"
+        },{
+            "command": "git diff --staged" ,
+            "descrpt": "compares currently staged files with last commit"
+        },{
+            "command": "git commit -a -m <i>'message'</i>" ,
+            "descrpt": "directly commits all tracked files without staging"
+        },{
+            "command": "git log" ,
+            "descrpt": "to see all previous commits information"
+        },{
+            "command": "git log -p" ,
+            "descrpt": "to see all changes between all commits"
+        },{
+            "command": "git log -p -<i>'number_of_commits'</i>" ,
+            "descrpt": "to see last specified number of commits & changes"
+        },{
+            "command": "git log --stat" ,
+            "descrpt": "to see a short summary of all changes in all commits (basically no. of addons & deletions)"
+        },{
+            "command": "git log --pretty=oneline" ,
+            "descrpt": "to see a commit per line for all previous commits"
+        },{
+            "command": "git log --pretty=short" ,
+            "descrpt": "to see only authors for all previous commits"
+        },{
+            "command": "git log --since=<i>'number.time_duration'</i>" ,
+            "descrpt": "to see commits from last specified number of time_duration = (days/weeks/months/years)"
+        },{
+            "command": "q" ,
+            "descrpt": "to exit after using git log command"
+        },{
+            "command": "git rm <i>'filename'</i>" ,
+            "descrpt": "to delete specified file & stage changes in current repository"
+        },{
+            "command": "git mv <i>'initial_filename'</i> <i>'new_filename'</i>" ,
+            "descrpt": "to rename a file & stage changes"
         },{
             "command": "" ,
             "descrpt": ""
