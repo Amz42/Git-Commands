@@ -18,15 +18,30 @@
 </head>
 <body>
     <h1 align="center">Git Commands</h1>
-    <table class="table table-striped table-dark">
-        <thead class="table-dark">
-            <tr>
-                <th> <h4>Command</h4> </th>
-                <th> <h4>Description</h4> </th>
-            </tr>
-        </thead>
-        <tbody id="commands" class=""></tbody>
-    </table>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-11 col-sm-12 col-xs-12 mx-auto">
+
+                <table class="table table-striped table-dark">
+                    <thead class="table-dark">
+                        <tr>
+                            <th> <h4>S.No</h4> </th>
+                            <th> <h4>Command</h4> </th>
+                            <th> <h4>Description</h4> </th>
+                        </tr>
+                    </thead>
+                    <tbody id="commands" class=""></tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <h4 align="center">To generate SSH key & add your computer's identity to Github Account</h4>
+    <p align="center"><a href="https://youtu.be/Thx5yerhlhs?t=470" target="_blank">Link to video</a> , watch at 07:50.</p>
+    <h5 align="center">OR</h5>
+    <p align="center">Visit <a href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh">Official Docs</a> By Github.</p>
 </body>
 
 
@@ -70,9 +85,6 @@
         },{
             "command": "git branch <i>'branch_name'</i>" ,
             "descrpt": "to create a new branch"
-        },{
-            "command": "git checkout <i>'branch_name'</i>" ,
-            "descrpt": "to switch & work with another branch in current repository"
         },{
             "command": "git push origin <i>'branch_name'</i>" ,
             "descrpt": "to push commits to a specified branch"
@@ -125,6 +137,39 @@
             "command": "git mv <i>'initial_filename'</i> <i>'new_filename'</i>" ,
             "descrpt": "to rename a file & stage changes"
         },{
+            "command": "git restore --staged <i>'filename'</i>" ,
+            "descrpt": "to unstage a staged file in present git repository"
+        },{
+            "command": "git checkout -- <i>'filename'</i>" ,
+            "descrpt": "to restore specified file same as last commit"
+        },{
+            "command": "git checkout -f" ,
+            "descrpt": "to restore current working state into last commit"
+        },{
+            "command": "git remote add <i>'origin' 'link_to_hosting_repository'</i>" ,
+            "descrpt": "to add a remote to git repository"
+        },{
+            "command": "git remote" ,
+            "descrpt": "to see all available remotes in git repository"
+        },{
+            "command": "git remote -v" ,
+            "descrpt": "to see fetching & pushing remotes' origins"
+        },{
+            "command": "git config --global alias.<i>'alias_name' 'original_command'</i>" ,
+            "descrpt": "to make alias(shorthands) for git commands"
+        },{
+            "command": "git checkout <i>'branch_name'</i>" ,
+            "descrpt": "to switch & work with another branch in current repository"
+        },{
+            "command": "git checkout -b <i>'new_branch_name'</i>" ,
+            "descrpt": "to make & switch to new branch with specified name"
+        },{
+            "command": "rm -rf .git" ,
+            "descrpt": "to remove git repository (only .git file, rest content will stay as it is)"
+        },{
+            "command": "" ,
+            "descrpt": ""
+        },{
             "command": "" ,
             "descrpt": ""
         },{
@@ -142,8 +187,10 @@
         }
     ];
 
+    let sno=1;
     obj.map(o=>{
-        document.getElementById("commands").innerHTML += `<tr> <td>${o.command}</td> <td>${o.descrpt}</td> </tr>`;
+        document.getElementById("commands").innerHTML += `<tr> <td>${sno}</td> <td>${o.command}</td> <td>${o.descrpt}</td> </tr>`;
+        sno++;
     });
 
 </script>
