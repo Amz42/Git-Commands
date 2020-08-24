@@ -86,6 +86,12 @@
             "command": "git branch <i>'branch_name'</i>" ,
             "descrpt": "to create a new branch"
         },{
+            "command": "git branch --merged" ,
+            "descrpt": "to see already merged branches in current branch"
+        },{
+            "command": "git branch --no-merged" ,
+            "descrpt": "to see unmerged branches in current branch"
+        },{
             "command": "git push origin <i>'branch_name'</i>" ,
             "descrpt": "to push commits to a specified branch"
         },{
@@ -167,11 +173,8 @@
             "command": "rm -rf .git" ,
             "descrpt": "to remove git repository (only .git file, rest content will stay as it is)"
         },{
-            "command": "" ,
-            "descrpt": ""
-        },{
-            "command": "" ,
-            "descrpt": ""
+            "command": "git branch -v" ,
+            "descrpt": "to see all branches with their last commit's hashcode & message"
         },{
             "command": "" ,
             "descrpt": ""
